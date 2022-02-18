@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0099cc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbProject.classes.specSceneController">
+   <children>
+      <TableView fx:id="specs" layoutX="29.0" layoutY="14.0" prefHeight="200.0" prefWidth="270.0">
+        <columns>
+          <TableColumn fx:id="specIdColumn" prefWidth="74.4000244140625" text="ID" />
+          <TableColumn fx:id="specDescColumn" onEditCommit="#editSpecDesc" prefWidth="193.5999755859375" text="Description" />
+        </columns>
+      </TableView>
+      <TextField fx:id="specDesc" layoutX="337.0" layoutY="14.0" promptText="Description" />
+      <Button layoutX="337.0" layoutY="57.0" mnemonicParsing="false" onAction="#createSpecialty" prefHeight="26.0" prefWidth="123.0" text="Add Specialty" />
+      <Button layoutX="337.0" layoutY="101.0" mnemonicParsing="false" onAction="#deleteSpec" prefHeight="26.0" prefWidth="123.0" text="Delete Specialty" />
+      <Button layoutX="29.0" layoutY="309.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="26.0" prefWidth="58.0" text="Back" />
+   </children>
+</AnchorPane>

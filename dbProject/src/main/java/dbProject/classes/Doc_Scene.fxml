@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="636.0" style="-fx-background-color: #0099cc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbProject.classes.docSceneController">
+   <children>
+      <TableView fx:id="docs" layoutY="14.0" prefHeight="200.0" prefWidth="636.0">
+        <columns>
+          <TableColumn fx:id="docIdColumn" prefWidth="61.600035071372986" text="ID" />
+          <TableColumn fx:id="docFnameColumn" onEditCommit="#editDocFname" prefWidth="113.59998321533203" text="First Name" />
+            <TableColumn fx:id="docLnameColumn" onEditCommit="#editDocLname" prefWidth="101.59991455078125" text="Last Name" />
+            <TableColumn fx:id="docPhonenumColumn" onEditCommit="#editDocPhoneNum" prefWidth="104.00006103515625" text="Phone Number" />
+            <TableColumn fx:id="docSpecColumn" onEditCommit="#editDocSpec" prefWidth="110.4000244140625" text="Specialty" />
+            <TableColumn fx:id="docDeptColumn" onEditCommit="#editDocDept" prefWidth="144.80001831054688" text="Department" />
+        </columns>
+      </TableView>
+      <TextField fx:id="docFname" alignment="CENTER" layoutX="30.0" layoutY="236.0" promptText="First Name" />
+      <TextField fx:id="docLname" alignment="CENTER" layoutX="217.0" layoutY="236.0" promptText="Last Name" />
+      <TextField fx:id="docPhoneNum" alignment="CENTER" layoutX="404.0" layoutY="236.0" onKeyTyped="#numCheck" promptText="Phone Number" />
+      <ChoiceBox fx:id="docSpec" layoutX="29.0" layoutY="309.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="docDept" layoutX="216.0" layoutY="309.0" prefWidth="150.0" />
+      <Label layoutX="80.0" layoutY="286.0" text="Specialty" />
+      <Label layoutX="259.0" layoutY="286.0" text="Department" />
+      <Button layoutX="404.0" layoutY="309.0" mnemonicParsing="false" onAction="#createDoctor" prefHeight="26.0" prefWidth="150.0" text="Add Doctor" />
+      <Button layoutX="404.0" layoutY="364.0" mnemonicParsing="false" onAction="#deleteDoctor" prefHeight="26.0" prefWidth="149.0" text="Delete Doctor" />
+      <Button layoutX="30.0" layoutY="417.0" mnemonicParsing="false" onAction="#backButtonPressed" text="Back" />
+      <Button layoutX="404.0" layoutY="416.0" mnemonicParsing="false" onAction="#searchBySpec" prefHeight="26.0" prefWidth="150.0" text="Search by Specialty" />
+      <Button layoutX="404.0" layoutY="466.0" mnemonicParsing="false" onAction="#searchByDept" prefHeight="26.0" prefWidth="149.0" text="Search by Department" />
+      <TextField fx:id="searchField" alignment="CENTER" layoutX="217.0" layoutY="416.0" promptText="Search field" />
+      <Button layoutX="404.0" layoutY="514.0" mnemonicParsing="false" onAction="#resetTable" prefHeight="26.0" prefWidth="149.0" text="Reset Table" />
+   </children>
+</AnchorPane>

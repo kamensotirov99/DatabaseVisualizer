@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0099cc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbProject.classes.deptSceneController">
+   <children>
+      <TableView fx:id="depts" layoutX="25.0" layoutY="14.0" prefHeight="200.0" prefWidth="304.0">
+        <columns>
+          <TableColumn fx:id="deptIdColumn" prefWidth="92.00006103515625" text="ID" />
+          <TableColumn fx:id="deptDescColumn" onEditCommit="#editDeptDesc" prefWidth="209.5999755859375" text="Description" />
+        </columns>
+      </TableView>
+      <TextField fx:id="deptDesc" alignment="CENTER" layoutX="355.0" layoutY="34.0" promptText="Description" />
+      <Button layoutX="355.0" layoutY="89.0" mnemonicParsing="false" onAction="#createDepartment" prefHeight="26.0" prefWidth="132.0" text="Add Department" />
+      <Button layoutX="355.0" layoutY="145.0" mnemonicParsing="false" onAction="#deleteDept" prefHeight="26.0" prefWidth="132.0" text="Delete Department" />
+      <Button layoutX="25.0" layoutY="320.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="26.0" prefWidth="55.0" text="Back" />
+   </children>
+</AnchorPane>

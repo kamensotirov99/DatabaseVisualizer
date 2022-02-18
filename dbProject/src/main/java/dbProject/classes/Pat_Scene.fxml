@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="600.0" style="-fx-background-color: #0099cc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbProject.classes.patSceneController">
+   <children>
+      <TableView fx:id="pats" layoutX="1.0" prefHeight="200.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="patIdColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="patFnameColumn" onEditCommit="#editPatFname" prefWidth="99.20001220703125" text="First Name" />
+            <TableColumn fx:id="patLnameColumn" onEditCommit="#editPatLname" prefWidth="106.40000915527344" text="Last Name" />
+            <TableColumn fx:id="patAddressColumn" onEditCommit="#editPatAddress" prefWidth="317.59991455078125" text="Address" />
+        </columns>
+      </TableView>
+      <TextField fx:id="patFname" layoutX="23.0" layoutY="232.0" promptText="First Name" />
+      <TextField fx:id="patLname" layoutX="205.0" layoutY="232.0" promptText="Last Name" />
+      <TextField fx:id="patAddress" layoutX="383.0" layoutY="232.0" promptText="Address" />
+      <Button layoutX="23.0" layoutY="282.0" mnemonicParsing="false" onAction="#createPatient" prefHeight="26.0" prefWidth="91.0" text="Add Patient" />
+      <Button layoutX="23.0" layoutY="327.0" mnemonicParsing="false" onAction="#deletePat" text="Delete Patient" />
+      <Button layoutX="23.0" layoutY="378.0" mnemonicParsing="false" onAction="#backButtonPressed" text="Back" />
+   </children>
+</AnchorPane>

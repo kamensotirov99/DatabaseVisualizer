@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="726.0" style="-fx-background-color: #0099cc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbProject.classes.trSceneController">
+   <children>
+      <TableView fx:id="treats" layoutX="2.0" layoutY="14.0" prefHeight="200.0" prefWidth="710.0">
+        <columns>
+          <TableColumn fx:id="trIdColumn" prefWidth="66.39996194839478" text="ID" />
+          <TableColumn fx:id="patIdColumn" onEditCommit="#editTrPat" prefWidth="101.60004425048828" text="Patient" />
+            <TableColumn fx:id="docIdColumn" onEditCommit="#editTrDoc" prefWidth="88.00006103515625" text="Doctor" />
+            <TableColumn fx:id="stDateColumn" onEditCommit="#editStDate" prefWidth="86.39996337890625" text="Start Date" />
+            <TableColumn fx:id="endDateColumn" onEditCommit="#editEndDate" prefWidth="85.5999755859375" text="End Date" />
+            <TableColumn fx:id="amountDueColumn" onEditCommit="#editAmountDue" prefWidth="108.80001831054688" text="Amount Due" />
+            <TableColumn fx:id="diagIdColumn" onEditCommit="#editTrDiagnosis" prefWidth="177.59991455078125" text="Diagnosis" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="trPats" layoutX="14.0" layoutY="251.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="trDocs" layoutX="193.0" layoutY="251.0" prefWidth="150.0" />
+      <DatePicker fx:id="stDate" layoutX="369.0" layoutY="250.0" prefHeight="26.0" prefWidth="150.0" />
+      <DatePicker fx:id="endDate" layoutX="547.0" layoutY="250.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField fx:id="amountDueField" alignment="CENTER" layoutX="15.0" layoutY="304.0" promptText="Amount Due" />
+      <ChoiceBox fx:id="trDiags" layoutX="193.0" layoutY="304.0" prefWidth="150.0" />
+      <Button layoutX="369.0" layoutY="304.0" mnemonicParsing="false" onAction="#createTreatment" text="Add Treatment" />
+      <Button layoutX="493.0" layoutY="304.0" mnemonicParsing="false" onAction="#deleteTreatment" text="Delete Treatment" />
+      <Button layoutX="15.0" layoutY="464.0" mnemonicParsing="false" onAction="#backButtonPressed" text="Back" />
+      <Label layoutX="63.0" layoutY="232.0" text="Patient" />
+      <Label layoutX="250.0" layoutY="232.0" text="Doctor" />
+      <Label layoutX="417.0" layoutY="232.0" text="Start Date" />
+      <Label layoutX="598.0" layoutY="232.0" text="End Date" />
+      <Label layoutX="242.0" layoutY="286.0" text="Diagnosis" />
+      <TextField fx:id="searchField" alignment="CENTER" layoutX="406.0" layoutY="408.0" promptText="Search Field" />
+      <Button alignment="CENTER" layoutX="623.0" layoutY="304.0" mnemonicParsing="false" onAction="#resetTable" prefHeight="26.0" prefWidth="67.0" text="Reset" />
+      <Button layoutX="568.0" layoutY="408.0" mnemonicParsing="false" onAction="#searchByPatient" prefHeight="26.0" prefWidth="126.0" text="Search By Patient" />
+      <Button alignment="CENTER" layoutX="570.0" layoutY="451.0" mnemonicParsing="false" onAction="#searchByDoctor" prefHeight="8.0" prefWidth="126.0" text="Search by Doctor" />
+      <Button layoutX="568.0" layoutY="363.0" mnemonicParsing="false" onAction="#searchByDiagnosis" prefHeight="26.0" prefWidth="126.0" text="Search by Diagnosis" />
+   </children>
+</AnchorPane>

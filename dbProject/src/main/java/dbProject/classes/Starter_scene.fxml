@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="613.0" style="-fx-background-color: #0099cc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbProject.classes.initController">
+   <children>
+      <Button layoutX="65.0" layoutY="87.0" mnemonicParsing="false" onAction="#docButtonPressed" prefHeight="26.0" prefWidth="114.0" text="View Doctors" />
+      <Button layoutX="476.0" layoutY="87.0" mnemonicParsing="false" onAction="#patButtonPressed" prefHeight="26.0" prefWidth="101.0" text="View Patients" />
+      <Button layoutX="64.0" layoutY="185.0" mnemonicParsing="false" onAction="#trButtonPressed" prefHeight="26.0" prefWidth="114.0" text="View Treatments" />
+      <Button layoutX="476.0" layoutY="185.0" mnemonicParsing="false" onAction="#diagButtonPressed" prefHeight="26.0" prefWidth="101.0" text="View Diagnosis" />
+      <Button layoutX="64.0" layoutY="289.0" mnemonicParsing="false" onAction="#deptButtonPressed" text="View Departments" />
+      <Button layoutX="474.0" layoutY="289.0" mnemonicParsing="false" onAction="#specButtonPressed" text="View Specialties" />
+   </children>
+</AnchorPane>
